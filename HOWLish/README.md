@@ -1,4 +1,5 @@
 # Howlish
+published in <ins>add link to publication when published</ins>
 
 HOWLish is a convolutional neural network trained for automated wolf howl detection. 
 
