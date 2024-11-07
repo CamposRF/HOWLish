@@ -1,8 +1,10 @@
 # Listening for Wolf Conservation
 By [Rafael Campos](https://www.cibio.up.pt/en/people/details/rafael-campos/), you can reach me at <ins>rffrcampos@gmail.com</ins>
 
-Welcome! This repository is dedicated to all the products of my PhD thesis "Listening for Wolf Conservation: Deep Learning for Automated Howl Recognition and Classification". 
-The thesis is supervised by Dr. Helena Rio-Maior, Dr. Francesco Renna, and  Dr. Miha Krofel, and supported by the Portuguese Foundation for Science and Technology grant 2021.08079.BD. 
+Welcome! This repository is dedicated to all the products of my PhD thesis "Listening for Wolf Conservation: Deep Learning for Automated Howl Recognition and Classification".
+
+The thesis is supervised by Dr. Helena Rio-Maior, Dr. Francesco Renna, and  Dr. Miha Krofel, and supported by the Portuguese Foundation for Science and Technology grant 2021.08079.BD.
+
 My work is hosted by CIBIO and, from January 2021 to December 2025, part of the BIODIV PhD program at the Faculty of Sciences, University of Porto. 
 
 ## Abstract 
