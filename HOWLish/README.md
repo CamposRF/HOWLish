@@ -9,5 +9,5 @@ HOWlish is able to retrieve 77% of the wolf examples of the test set (36,198,705
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
 
-[!NOTE]
-All data was collected between 2020 and 2024 and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. 
+> [!NOTE]
+> All data was collected between 2020 and 2024 and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. 
