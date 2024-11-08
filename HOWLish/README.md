@@ -1,6 +1,9 @@
 # Howlish: a CNN for automated wolf howl detection
 published in <ins>add link to publication when published</ins>
 
+HOWLish classifies short audio snippets - 0.96 seconds of audio represented in log mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl.  
+Its target deployment enviornment is the detection of wolf howling events in recorded soundscapes, specificly in the context of passive acoustic wolf monitoring protocols. 
+
 We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
 For a detailed description of the development process we suggest reading <ins>add link to publication when published</ins>.
 
