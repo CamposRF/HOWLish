@@ -16,6 +16,3 @@ HOWLish v 1.0.0 can be downloaded:
 
 > [!NOTE]
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please contact the archive curator (paulo-marques@edu.ulisboa.pt) and to the collections head (geral@museus.ulisboa.pt).
-
-## Usage
-
