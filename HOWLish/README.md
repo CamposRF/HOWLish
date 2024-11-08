@@ -11,8 +11,8 @@ At a prediction threshold of .5, HOWlish is able to retrieve 77% of the wolf exa
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
 
 HOWLish can be downloaded: 
-- here for the TensorFlow checkpoint format; 
-- here for the frozen graph version 
+- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
+- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph version 
 
 > [!NOTE]
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please contact the archive curator (paulo-marques@edu.ulisboa.pt) and to the collections head (geral@museus.ulisboa.pt).
