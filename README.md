@@ -2,6 +2,8 @@
 
 Welcome! 
 
+(more information to be added in the future)
+
 ## Abstract
 
 Wolves are difficult to monitor, which often results in incomplete knowledge on the status of their populations. Past studies have shown that spontaneous howling behaviour can be monitored to collect baseline ecological data on wolves – locate packs, count pack members, and confirm reproduction. Yet, the potential of passive acoustic monitoring has always been limited for wolves by the high cost of autonomous recording units and the (manual) classification bottleneck. During my PhD I propose to take advantage of deep learning tools to widen the bottleneck of detecting and classifying wolf howls in recorded soundscapes. I believe that by addressing this methodological gap, conservationists will be able to leverage the now commercially available low-cost autonomous recording units (albeit inflation ... ) in favour of efficient wolf monitoring strategies. At the same time, I will also study how patterns of spontaneous wolf howling behaviour could be leveraged to optimize sampling. All my work will be developed in the Iberia Peninsula and made open access when possible.
