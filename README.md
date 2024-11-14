@@ -1,6 +1,5 @@
 # Listening for Wolf Conservation
-By ...
-
+By [censored]
 Welcome! This repository is dedicated to all the products of my PhD thesis ... .
 
 The thesis is supervised by ..., and supported by the .... My work is hosted by ... and, from ..., part of the ... at the .... 
