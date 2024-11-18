@@ -17,5 +17,10 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph version 
 
+##Detection Pipeline
+
+###Dependencies
+The detection pipeline makes use of preprocessing scripts from teh original (VGGish repository)[https://github.com/tensorflow/models/tree/master/research/audioset/vggish], all licensed under Apache License 2.0. All changes we made are identified by a comment. We included a link to the original version on each script. 
+
 > [!NOTE]
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please contact the archive curator (paulo-marques@edu.ulisboa.pt) and to the collections head (geral@museus.ulisboa.pt).
