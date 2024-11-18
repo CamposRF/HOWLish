@@ -6,20 +6,17 @@
 # windows that are closer than a given number of examples are merged together; 
 # resulting windows get exported as individual sound segments
 
-import sys
 import time
 import datetime
 import os
 import re
-import pydub #from pydub import AudioSegment
+import pydub 
 
 import tensorflow as tf
 import numpy as np
 import pandas as pd
 
-import vggish_slim.vggish_input as vg
-
-##ATTENTION, shutting down when finnished is ON
+import vggish_input as vg
 
 ##Load function 
 def wrap_frozen_graph(graph_def, inputs, outputs, print_graph=False):
@@ -62,23 +59,16 @@ def moving_average(a, n=3): #https://stackoverflow.com/questions/14313510/how-to
     ret[n:] = ret[n:] - ret[:-n]
     return ret[n - 1:] / n
 
-source_folder = r"J:\01_work\01_L4C\01_data\03_soundscapes-to-process"
-save_folder = r"D:\07_outputs"
-
-#campaign_list = ["R166", "R167", "R168", "R169", "R170", "R171","R173", "R174", 
-#                "R175", "R176", "R177", "R178", "R179", "R180", "R181", "R182",
-#                "R183"] #CaseStudy
-
-
+source_folder =     #Add path to the folder where all the .WAV files of the recorded soundscapes are
+save_folder =       #Add path to the folder where you want all the output files to be saved
 campaign_list = os.listdir(source_folder)
 
-model_name = "HOWLish_v1" #"HOWLish_v1"
-pipeline_name = "rollavg_v2" #"rollavg_v2"
-window_size = 3 #3
-threshold = 0.90 #0.90
+model_name = "HOWLish_v1.0.0" 
+pipeline_name = "rollavg_v1.0.0" 
+window_size = 3 # W in original manuscript
+threshold = 0.90 # T in original manuscript
 lenght_seconds = 110 #110 seconds = 1 minute and 50 seconds
 
-#Pipeline
 for c in campaign_list:
     campaign_start_time = time.time()
     campaign = c
@@ -109,7 +99,7 @@ for c in campaign_list:
             lenght_campaign_seconds = (len(examples) + 1) * 0.96
 
             start_seconds = start * 0.96
-            stop_seconds = (stop + 1) * 0.96 #must be +1 because the "stop" value states where the stop example starts, and we want to include it as well. 
+            stop_seconds = (stop + 1) * 0.96 
             
             diff_seconds = stop_seconds - start_seconds
             add_seconds = lenght_seconds - diff_seconds
@@ -135,9 +125,9 @@ for c in campaign_list:
             for j in range(len(selected_clips)):
                 if selected_clips["drop"][j] == 0:
 
-                    selected_clips["ground_start"] = selected_clips["start_seconds"][j]     #get the reference clip start
-                    selected_clips["ground_stop"] = selected_clips["stop_seconds"][j]       #get the reference clip stop
-                    selected_clips["intersection_seconds"] = selected_clips[["stop_seconds", "ground_stop"]].min(axis=1) - selected_clips[["start_seconds", "ground_start"]].max(axis=1) #calculate interseption
+                    selected_clips["ground_start"] = selected_clips["start_seconds"][j]     
+                    selected_clips["ground_stop"] = selected_clips["stop_seconds"][j]       
+                    selected_clips["intersection_seconds"] = selected_clips[["stop_seconds", "ground_stop"]].min(axis=1) - selected_clips[["start_seconds", "ground_start"]].max(axis=1) 
                     #https://stackoverflow.com/questions/33975128/pandas-get-the-row-wise-minimum-value-of-two-or-more-columns
                     #https://scicomp.stackexchange.com/questions/26258/the-easiest-way-to-find-intersection-of-two-intervals
 
@@ -151,28 +141,17 @@ for c in campaign_list:
 
             source_wav = pydub.AudioSegment.from_wav(os.path.join(source_folder,campaign,files[i]))
 
-            #https://stackoverflow.com/questions/37999150/how-to-split-a-wav-file-into-multiple-wav-files
             for k in range(len(selected_clips)):
                 b = selected_clips["start_seconds"][k] * 1000 #works in miliseconds
                 e = selected_clips["stop_seconds"][k]* 1000
                 e = np.min([len(source_wav), e])
                 temp_clip = source_wav[b:e]
 
-                #file_hour = int(files[i][-10:-8])
-                #file_minute = int(files[i][-8:-6])
-                #file_second = int(files[i][-6:-4])
-                #time_in_seconds = (selected_clips["start_seconds"][k]) + (file_hour * 3600) + (file_minute * 60) + (file_second) #((final_start[k] - ((window_size - 1) * 0.96))/0.96) + (file_hour * 3600) + (file_minute * 60) + (file_second)
-
-                #clip_hour = str(int(str(datetime.timedelta(seconds= time_in_seconds)).split(':')[-3][-2:])).zfill(2)
-                #clip_minute = str(datetime.timedelta(seconds= time_in_seconds)).split(':')[-2].zfill(2)
-                #clip_second = str(datetime.timedelta(seconds= time_in_seconds)).split(':')[-1][:2].zfill(2)
-                #time_in_code = clip_hour + clip_minute + clip_second
-
                 clip_minute = str(datetime.timedelta(seconds= selected_clips["start_seconds"][k])).split(':')[-2].zfill(2)
                 clip_second = str(datetime.timedelta(seconds= selected_clips["start_seconds"][k])).split(':')[-1][:2].zfill(2)
                 time_in_code = clip_minute + clip_second
 
-                temp_clip.export(save_path + "\\" + files[i][:-4] + "_" + time_in_code + "_" + str(int(selected_clips["rollavg"][k]*10000))  + ".wav", format="wav", tags=None) #campaign_pvalue_date_time.wav
+                temp_clip.export(save_path + "\\" + files[i][:-4] + "_" + time_in_code + "_" + str(int(selected_clips["rollavg"][k]*10000))  + ".wav", format="wav", tags=None) 
     
     campaign_stop_time = time.time()
     campaign_GPU_time = campaign_stop_time - campaign_start_time
@@ -183,4 +162,3 @@ for c in campaign_list:
     
     print(c + " finished in " + str(round(campaign_GPU_time/60, ndigits=0)) + " minutes! \õ/")
 
-#os.system("shutdown /s /t 1")
