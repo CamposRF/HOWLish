@@ -2,9 +2,9 @@
 
 HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howl (*Canis lupus*, Linnaeus 1758) in short snippets of recorded sound. 
 
-HOWLish was trained by performing transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). It has a VGG-like architecture, but was adjusted for binary classification. 
+We trained HOWLish by performing transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). It thus has a VGG-like architecture, but adjusted for binary classification. 
 
-Here, we provide open access to HOWLish as well as an implementation of a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
+Here, we provide open access to HOWLish and to an implementation of a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
