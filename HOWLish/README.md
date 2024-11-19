@@ -43,7 +43,9 @@ We ha been deploying HOWLish to field operations through a detection pipeline th
 4) Windows with average prediction values lower than a threshold of value **T** are excluded;
 5) 110 seconds of sound around the retained windows are exported as sound segments potentially containing wolf howls.
 
-<img width="1549" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/63ca4656-1664-4b89-8ceb-b267bef6f61a">
+
+<img width="1705" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/8d4675da-716a-4a64-a66a-f4f0d9b615ce">
+
 
 In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
