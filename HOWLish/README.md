@@ -1,6 +1,3 @@
-> [!WARNING]
-> Work in progress!
-
 # HOWLish
 
 HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in audio data. 
