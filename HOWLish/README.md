@@ -4,7 +4,7 @@ HOWLish is a pretrained convolutional neuronal network that predicts the presenc
 
 We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes with 1014 manually labelled howling events. 
 
-Here, we provide HOWLish and a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
+Here, we provide HOWLish and a tailored pipeline that can be used for field deploymnent. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
@@ -28,11 +28,10 @@ HOWLish v 1.0.0 can be downloaded:
 
 ## Deployment
 
-HOWLish target deployment enviornment are passive acoustic wolf monitoring protocols. Ultimatly, we developed HOWLish to establish a baseline for free pretrained tools for automated wolf howl detection. 
+We developped HOWLish with passive acoustic wolf monitoring in mind; or goal was to establish the baseline for free pretrained tools that allow automated detection of wolf howls in large volumes of recorded soudscapes. 
 
-Since HOWLish is but a CNN that classifies 96 x 64 
-
-We also made the detection pipeline - a series of pre and post processing rules - we have been using since 2023 available to anyone who whishes to use it. 
+HOWLish functions as a car engine, that still needs a whole set of components before it is able to transform work into movement, in this case classification into wolf howl detection. 
+Accordingly, we designed a series of pre- and post- processing rules that allows the conversion of soundscapes.WAV files into 1 minute and 50 seconds clips of sound potentially containing wolf howls - a detection pipeline. 
 
 ## Detection pipeline
 
