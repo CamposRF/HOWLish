@@ -33,7 +33,7 @@ We developped HOWLish with passive acoustic wolf monitoring in mind; or goal was
 HOWLish functions as a car engine, that still needs a whole set of components before it is able to transform work into movement, in this case classification into wolf howl detection. 
 Accordingly, we designed a series of pre- and post- processing rules that allows the conversion of soundscapes.WAV files into 1 minute and 50 seconds clips of sound potentially containing wolf howls - a detection pipeline. 
 
-## Detection pipeline
+### Detection pipeline
 
 We ha been deploying HOWLish to field operations through a detection pipeline that takes recorded soundscapes as input and outputs sound segments where it predicts wolf howls to be present. The pipeline has the following flow:
 
@@ -48,12 +48,16 @@ Here's a graphical representation of this workflow (not at scale):
 <img width="1705" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/8d4675da-716a-4a64-a66a-f4f0d9b615ce">
 
 We performed a sensitivity analysis of window size (W) and exclusion threshold (T) on the pipeline’s ability to retrieve howling events from the test set (n = 175 howling events). We found W = 3 and T = 0.9 to be optimal operating conditions for our operations.
+During field tests and with these operating settings, HOWLish was able to retrieve 81.3% of the howling events detected through manual classification. 
 
-Using these settings, In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
+Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
-### Credits
+## Usage
+
+((work in progress))
+
+## Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
-
 
 > [!NOTE]
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please contact the archive curator (paulo-marques@edu.ulisboa.pt) and to the collections head (geral@museus.ulisboa.pt).
