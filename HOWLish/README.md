@@ -35,11 +35,12 @@ Accordingly, we designed a series of pre- and post- processing rules that allows
 
 ## Detection pipeline
 
-We ha been deploying HOWLish to field operations through a detection pipeline that takes recorded soundscapes as input and outputs sound segments where it predicts wolf howls to be present. The pipeline has the following flow: 
-1) soundscapes get segmented into 0.96s long audio examples;
-2) HOWlish predicts whether each example is not-wolf or wolf (prediction value between 0 and 1, respectively);
-3) prediction values get averaged by a moving window of size W;
-4) windows with average prediction values lower than a threshold of value T are excluded;
+We ha been deploying HOWLish to field operations through a detection pipeline that takes recorded soundscapes as input and outputs sound segments where it predicts wolf howls to be present. The pipeline has the following flow:
+
+1) Soundscapes get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
+2) HOWlish predicts whether each example is *not-wolf* or *wolf* (prediction value between 0 and 1, respectively);
+3) Prediction values get averaged by a moving window of size **W**;
+4) Windows with average prediction values lower than a threshold of value **T** are excluded;
 5) 110 seconds of sound around the retained windows are exported as sound segments potentially containing wolf howls.
 
 In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
