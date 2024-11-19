@@ -2,15 +2,21 @@
 
 HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in audio data. 
 
-We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
+We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes with 1014 manually labelled howling events. 
 
 Here, we provide HOWLish and a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
-HOWLish classifies short audio snippets - 0.96 seconds of audio represented in log mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl.  
+HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl.
 
-At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* examples of the test set (36,198,705 *not-wolf* examples and 5,081 *wolf* examples) with a false positive rate of 1.74%. In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
+We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. We adapted the VGGish's original Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz.
+
+We preprocessed our 50,137 hours of recorded soundscapes into a train dataset containing 96,361 *not-wolf* and 17,927 *wolf* examples, a validation dataset containing 41,475,717 *not-wolf* and 2,290 *wolf* examples, and a test dataset containing 36,198,705 *not-wolf* examples and 5,081 *wolf* examples. We randomly undersampled the majority class and used class weights during training to balance both classes. 
+
+### Performance
+
+At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* examples on the test set with a false positive rate of 1.74%. 
 
 | Model  | Accuracy | Precision | Recall | Fall-out | F1-score | F2-score | AUC | PRC |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -20,17 +26,17 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
-## Usage
+## Deployment
 
-Its target deployment enviornment is the detection of wolf howling events in recorded soundscapes, specificly in the context of passive acoustic wolf monitoring protocols.
+HOWLish target deployment enviornment are passive acoustic wolf monitoring protocols. Ultimatly, we developed HOWLish to establish a baseline for free pretrained tools for automated wolf howl detection. 
 
-We developed HOWLish to widen the logistic bottleneck of detecting wolf howls in recorded soundcapes. 
-
-Passive acoustic monitoring of wolves naturally warrants the deployment of large numbers of ARUs that soon become a logistic nightmare to handle. We thus set out to provide the scietific and conservation community with a free and already trained tool that could facilitate the detection of howls in recorded data. Although currently locked behing the user's ability to deploy a CNN, HOWLish is trained, free, and ready to be deployed in passive acoustic monitoring operations - or any other operation looking to detect wolf howls.  
+Since HOWLish is but a CNN that classifies 96 x 64 
 
 We also made the detection pipeline - a series of pre and post processing rules - we have been using since 2023 available to anyone who whishes to use it. 
 
 ## Detection pipeline
+
+In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
 ### Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
