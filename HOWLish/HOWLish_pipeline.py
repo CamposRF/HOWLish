@@ -1,10 +1,4 @@
-# This version of the pipeline has the following flow: 
-# soundscapes get segmented into 0.96s long audio files; 
-# HOWlish predicts whether each segment is not-wolf or wolf (prediction value between 0 and 1, respectively); 
-# prediction values get averaged by a moving window with a predetermined size; 
-# windows with average prediction values lower that a predetermined threshold are excluded; 
-# windows that are closer than a given number of examples are merged together; 
-# resulting windows get exported as individual sound segments
+#HOWLish detection pipeline v.1.0.0.
 
 import time
 import datetime
@@ -54,7 +48,7 @@ def my_func(img):
     prediction = frozen_func(x=img_tensor)
     return prediction[0].numpy()[0,0]
 
-def moving_average(a, n=3): #https://stackoverflow.com/questions/14313510/how-to-calculate-rolling-moving-average-using-python-numpy-scipy
+def moving_average(a, n=3): 
     ret = np.cumsum(a, dtype=float)
     ret[n:] = ret[n:] - ret[:-n]
     return ret[n - 1:] / n
@@ -128,8 +122,6 @@ for c in campaign_list:
                     selected_clips["ground_start"] = selected_clips["start_seconds"][j]     
                     selected_clips["ground_stop"] = selected_clips["stop_seconds"][j]       
                     selected_clips["intersection_seconds"] = selected_clips[["stop_seconds", "ground_stop"]].min(axis=1) - selected_clips[["start_seconds", "ground_start"]].max(axis=1) 
-                    #https://stackoverflow.com/questions/33975128/pandas-get-the-row-wise-minimum-value-of-two-or-more-columns
-                    #https://scicomp.stackexchange.com/questions/26258/the-easiest-way-to-find-intersection-of-two-intervals
 
                     for k in range(len(selected_clips)):
                         if (selected_clips["intersection_seconds"][k] > 55) and (j != k):
