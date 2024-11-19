@@ -37,17 +37,19 @@ Accordingly, we designed a series of pre- and post- processing rules that allows
 
 We ha been deploying HOWLish to field operations through a detection pipeline that takes recorded soundscapes as input and outputs sound segments where it predicts wolf howls to be present. The pipeline has the following flow:
 
-1) Soundscapes get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
+1) Observed soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
 2) HOWlish predicts whether each example is *not-wolf* or *wolf* (prediction value between 0 and 1, respectively);
 3) Prediction values get averaged by a moving window of size **W**;
-4) Windows with average prediction values lower than a threshold of value **T** are excluded;
+4) Windows with average prediction values higher than a threshold of value **T** are selected;
 5) 110 seconds of sound around the retained windows are exported as sound segments potentially containing wolf howls.
 
+Here's a graphical representation of this workflow (not at scale):
 
 <img width="1705" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/8d4675da-716a-4a64-a66a-f4f0d9b615ce">
 
+We performed a sensitivity analysis of window size (W) and exclusion threshold (T) on the pipeline’s ability to retrieve howling events from the test set (n = 175 howling events). We found W = 3 and T = 0.9 to be optimal operating conditions for our operations.
 
-In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
+Using these settings, In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
 ### Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
