@@ -1,12 +1,10 @@
 # HOWLish
 
-HOWLish is a convolutional neuronal network trained for wolf howl detection. 
+HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howl (*Canis lupus*, Linnaeus 1758) in short snippets of recorded sound. 
 
-We developed HOWLish to widen the logistic bottleneck of detecting wolf howls in recorded soundcapes. 
+HOWLish was trained by performing transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). It has a VGG-like architecture, but was adjusted for binary classification. 
 
-Passive acoustic monitoring of wolves naturally warrants the deployment of large numbers of ARUs that soon become a logistic nightmare to handle. We thus set out to provide the scietific and conservation community with a free and already trained tool that could facilitate the detection of howls in recorded data. Although currently locked behing the user's ability to deploy a CNN, HOWLish is trained, free, and ready to be deployed in passive acoustic monitoring operations - or any other operation looking to detect wolf howls.  
-
-We also made the detection pipeline - a series of pre and post processing rules - we have been using since 2023 available to anyone who whishes to use it. 
+Here, we provide open access to HOWLish as well as an implementation of a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
@@ -24,7 +22,15 @@ At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* e
 
 HOWLish v 1.0.0 can be downloaded: 
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
-- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph version 
+- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
+
+## Usage
+
+We developed HOWLish to widen the logistic bottleneck of detecting wolf howls in recorded soundcapes. 
+
+Passive acoustic monitoring of wolves naturally warrants the deployment of large numbers of ARUs that soon become a logistic nightmare to handle. We thus set out to provide the scietific and conservation community with a free and already trained tool that could facilitate the detection of howls in recorded data. Although currently locked behing the user's ability to deploy a CNN, HOWLish is trained, free, and ready to be deployed in passive acoustic monitoring operations - or any other operation looking to detect wolf howls.  
+
+We also made the detection pipeline - a series of pre and post processing rules - we have been using since 2023 available to anyone who whishes to use it. 
 
 ## Detection pipeline
 
