@@ -1,6 +1,6 @@
 # HOWLish
 
-HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howl (*Canis lupus*, Linnaeus 1758) in audio data. 
+HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in audio data. 
 
 We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
 
