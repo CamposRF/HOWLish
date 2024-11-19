@@ -1,7 +1,6 @@
-# Howlish: a CNN for automated wolf howl detection
-peer reviewed research paper here <ins>add link</ins>
+# HOWLish
 
-## Usage
+HOWLish is a convolutional neuronal network trained for wolf howl detection. 
 
 We developed HOWLish to widen the logistic bottleneck of detecting wolf howls in recorded soundcapes. 
 
