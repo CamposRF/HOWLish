@@ -1,18 +1,14 @@
 # HOWLish
 
-HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howl (*Canis lupus*, Linnaeus 1758) in short snippets of recorded sound. 
+HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howl (*Canis lupus*, Linnaeus 1758) in audio data. 
 
-We trained HOWLish by performing transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). It thus has a VGG-like architecture, but adjusted for binary classification. 
+We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
 
 Here, we provide open access to HOWLish and to an implementation of a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
 HOWLish classifies short audio snippets - 0.96 seconds of audio represented in log mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl.  
-Its target deployment enviornment is the detection of wolf howling events in recorded soundscapes, specificly in the context of passive acoustic wolf monitoring protocols. 
-
-We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
-For a detailed description of the development process we suggest reading <ins>add link to publication when published</ins>.
 
 At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* examples of the test set (36,198,705 *not-wolf* examples and 5,081 *wolf* examples) with a false positive rate of 1.74%. In a real-world deployment setting, HOWLish was able to retrieve 81.3% of the howling events we detected through manual classification. Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
@@ -25,6 +21,8 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
 ## Usage
+
+Its target deployment enviornment is the detection of wolf howling events in recorded soundscapes, specificly in the context of passive acoustic wolf monitoring protocols.
 
 We developed HOWLish to widen the logistic bottleneck of detecting wolf howls in recorded soundcapes. 
 
