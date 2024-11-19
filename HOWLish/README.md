@@ -4,7 +4,7 @@ HOWLish is a pretrained convolutional neuronal network that predicts the presenc
 
 We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes with 1014 manually labelled howling events. 
 
-Here, we provide open access to HOWLish and to an implementation of a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
+Here, we provide HOWLish and a pipeline that can be used to deploy HOWLish to field operations. For a detailed description read <ins>add link to publication when published</ins>.
 
 ## The model
 
