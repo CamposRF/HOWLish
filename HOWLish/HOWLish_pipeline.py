@@ -12,6 +12,8 @@ import pandas as pd
 
 import vggish_input as vg
 
+path_to_howlish_frozen =  #Add here path to HOWLish in frozen graph format
+
 ##Load function 
 def wrap_frozen_graph(graph_def, inputs, outputs, print_graph=False):
     def _imports_graph_def():
@@ -30,7 +32,7 @@ def wrap_frozen_graph(graph_def, inputs, outputs, print_graph=False):
         tf.nest.map_structure(import_graph.as_graph_element, outputs))
 
 # Load frozen graph using TensorFlow 1.x functions
-with tf.io.gfile.GFile(r"D:\04_trainedmodels\01_FrozenGraphs\HOWLish_frozen_graph.pb", "rb") as f:
+with tf.io.gfile.GFile(path_to_howlish_frozen, "rb") as f:
     graph_def = tf.compat.v1.GraphDef()
     loaded = graph_def.ParseFromString(f.read())
 
