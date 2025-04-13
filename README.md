@@ -16,7 +16,7 @@ We preserved VGGish’s original architecture (top included), but added a sigmoi
 
 We adapted the VGGish's original input Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz. You can inspect these changes [here](https://github.com/CamposRF/HOWLish/blob/test/detection_pipeline/vggish_params.py).
 
-Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf*  96 x 64 log-mel spectrograms examples HOWLish achieved the following performance: 
+Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf*  96 x 64 log-mel spectrograms examples, HOWLish achieved the following performance: 
 
 <div align="center">
 
