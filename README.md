@@ -6,7 +6,7 @@ We developed HOWLish by fine-tuning [VGGish](https://github.com/tensorflow/model
 
 It classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
 
-Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf*  96 x 64 log-mel spectrograms examples, HOWLish achieved the following performance: 
+Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf* audio snippets, HOWLish achieved the following performance: 
 
 <div align="center">
 
