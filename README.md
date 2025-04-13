@@ -39,6 +39,7 @@ We developped a detection pipeline to deploy HOWLish to field operations. Its cu
 
 <div align="left">
 
+
 We performed a sensitivity analysis to window size (W) and exclusion threshold (T) on the pipeline’s ability to retrieve howling events from the test set (n = 175 howling events), and found W = 3 and T = 0.9 to be optimal operating conditions for our operations.
 
 ### Usage
