@@ -1,6 +1,6 @@
 # HOWLish
 
-HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in audio data. 
+HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in 8kHz audio data. 
 
 We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes with 1014 manually labelled howling events. For a detailed description read <ins>add link to publication when published</ins>.
 
@@ -10,7 +10,9 @@ HOWLish v 1.0.0 can be downloaded:
 
 ## The model
 
-HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. 
+HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
+
+We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. 
 
 We adapted the VGGish's original input Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz. 
 
@@ -38,6 +40,7 @@ We developped a detection pipeline (currently v1.0.0) to deploy HOWLish to field
 
 We performed a sensitivity analysis of window size (W) and exclusion threshold (T) on the pipeline’s ability to retrieve howling events from the test set (n = 175 howling events). 
 
+![HeatMap_1050x682](https://github.com/user-attachments/assets/ee20d0c3-363d-4523-9b9b-feb7acea4f64)
 
 We found W = 3 and T = 0.9 to be optimal operating conditions for our operations. Operating at these settigns during field tests, the detection pipeline achieved a recall of 81.3% (precision = 0.013), offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and reduced 15-fold the total operator time needed for detection, when compared to manual annotation. For a detailed description read <ins>add link to publication when published</ins>.
 
