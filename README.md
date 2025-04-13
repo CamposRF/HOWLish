@@ -24,7 +24,7 @@ At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* e
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
 
-## Deployment
+## Detection Pipeline
 
 We developped a detection pipeline (currently v1.0.0) to deploy HOWLish to field operations. It has the followign flow: 
 
@@ -43,7 +43,7 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 For a detailed description of the pipeline's performance during field tests read <ins>add link to publication when published</ins>.
 
 
-## Usage
+### Usage
 
 To deploy HOWLish using our detection pipeline we suggest downloading the latest release from (LINK). 
 
