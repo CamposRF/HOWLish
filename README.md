@@ -45,13 +45,11 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-To deploy HOWLish using our detection pipeline we suggest downloading the latest release from (LINK). 
+To deploy HOWLish using our detection pipeline we suggest downloading its [latest release](https://github.com/CamposRF/HOWLish/releases), and following this tutorial.  
 
-A toy dataset can be downloaded [here](https://drive.google.com/file/d/11ouRaRAI_V38n5T4q4Cr8zgeRPUB2jgS/view?usp=drive_link). This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
-The dataset is structured in two folders: input and output, compatible with the way the detection pipeline was coded. The .WAV files are 30 minutes long and were recorded with a sample rate of 8kHz. The current version of the pipeline only works with 8kHz audio data. 
+THe toy dataset can be downloaded [here](https://drive.google.com/file/d/11ouRaRAI_V38n5T4q4Cr8zgeRPUB2jgS/view?usp=drive_link). 
+This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
 
-
-((work in progress))
 
 ## Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
