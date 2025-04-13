@@ -21,9 +21,12 @@ We adapted the VGGish's original input Short-Time Fourier Transform [parameters]
 At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* examples on the test set with a false positive rate of 1.74%. 
 
 <div align="center">
+
 | Model  | Accuracy | Precision | Recall | Fall-out | F1-score | F2-score | AUC | PRC |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
+
+<div align="left">
 
 ## Detection Pipeline
 
