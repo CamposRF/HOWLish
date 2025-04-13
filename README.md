@@ -24,7 +24,7 @@ HOWLish v 1.0.0 can be downloaded:
 
 ## Detection Pipeline
 
-We developped a detection pipeline (currently v1.0.0) to deploy HOWLish to field operations. It has the followign flow: 
+We developped a detection pipeline to deploy HOWLish to field operations. Its current version (1.0.0) has the followign flow: 
 
 1) Observed soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
 2) HOWlish predicts whether each example is *not-wolf* or *wolf* (continuous prediction value between 0 and 1, respectively);
