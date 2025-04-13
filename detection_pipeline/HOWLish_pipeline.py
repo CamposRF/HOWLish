@@ -69,7 +69,7 @@ for c in campaign_list:
     campaign_start_time = time.time()
     campaign = c
     
-    files = os.listdir(source_folder + "\\" + campaign)
+    files = os.listdir(os.path.join(source_folder,campaign))
     pattern = ".*WAV"  #Exclude txt
     files = [x for x in files if re.match(pattern, x)]
     
@@ -145,7 +145,7 @@ for c in campaign_list:
                 clip_second = str(datetime.timedelta(seconds= selected_clips["start_seconds"][k])).split(':')[-1][:2].zfill(2)
                 time_in_code = clip_minute + clip_second
 
-                temp_clip.export(save_path + "\\" + files[i][:-4] + "_" + time_in_code + "_" + str(int(selected_clips["rollavg"][k]*10000))  + ".wav", format="wav", tags=None) 
+                temp_clip.export(os.path.join(save_path, files[i][:-4] + "_" + time_in_code + "_" + str(int(selected_clips["rollavg"][k]*10000))  + ".wav"), format="wav", tags=None) 
     
     campaign_stop_time = time.time()
     campaign_GPU_time = campaign_stop_time - campaign_start_time
