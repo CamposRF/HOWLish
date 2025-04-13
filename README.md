@@ -1,14 +1,8 @@
 # HOWLish
 
-HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in 8kHz audio data. For a detailed description read <ins>add link to publication when published</ins>.
+HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in 8kHz audio data. 
 
-We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes, containing 1014 manually labelled howling events. 
-
-HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
-
-We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. 
-
-We adapted the VGGish's original input Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz. You can inspect these changes [here](https://github.com/CamposRF/HOWLish/blob/test/detection_pipeline/vggish_params.py).
+We developed HOWLish by fine-tuning [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes, containing 1014 manually labelled howling events. It classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. For a detailed description read <ins>add link to publication when published</ins>.
 
 Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf*  96 x 64 log-mel spectrograms examples, HOWLish achieved the following performance: 
 
