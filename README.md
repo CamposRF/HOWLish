@@ -8,8 +8,6 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
-## The model
-
 HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
 
 We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. 
