@@ -4,7 +4,7 @@ HOWLish is a pretrained convolutional neuronal network that predicts the presenc
 
 We developed HOWLish by fine-tuning [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of soundscapes recorded in the Iberia Peninsula, containing 1014 manually labelled howling events. 
 
-It classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
+HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
 
 Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf* audio snippets, HOWLish achieved the following performance: 
 
