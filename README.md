@@ -14,7 +14,7 @@ HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 9
 
 We preserved VGGish’s original architecture (top included), but added a sigmoid layer as the output layer to match our binary classification task of distinguishing between not-wolf and wolf examples. 
 
-We adapted the VGGish's original input Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz. 
+We adapted the VGGish's original input Short-Time Fourier Transform [parameters](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/vggish_params.py) to our 8 kHz sampling frequency data by using a window size of 0.05 seconds (400 samples) and re-dimensioned the frequency axis to a maximum frequency of 2,000 Hz. You can inspect these changes [here](https://github.com/CamposRF/HOWLish/blob/test/detection_pipeline/vggish_params.py).
 
 ### Performance
 
