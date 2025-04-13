@@ -38,7 +38,12 @@ We developped a detection pipeline (currently v1.0.0) to deploy HOWLish to field
 4) Windows with average prediction values higher than a threshold of value **T** are selected;
 5) 110 seconds of sound around the retained windows are exported as sound segments potentially containing wolf howls.
 
+
+<div align="center">
+
 <img width="1705" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/8d4675da-716a-4a64-a66a-f4f0d9b615ce">
+
+<div align="left">
 
 ### Sensitivity to W and T
 
