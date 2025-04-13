@@ -2,11 +2,7 @@
 
 HOWLish is a pretrained convolutional neuronal network that predicts the presence of wolf howls (*Canis lupus*, Linnaeus 1758) in 8kHz audio data. 
 
-We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes, containing 1014 manually labelled howling events. For a detailed description read <ins>add link to publication when published</ins>.
-
-HOWLish v 1.0.0 can be downloaded: 
-- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
-- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
+We developed HOWLish by applying transfer learning from [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) to a dataset of 50,137 hours of recorded soundscapes, containing 1014 manually labelled howling events. 
 
 HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl. 
 
@@ -23,6 +19,12 @@ Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf*  96 x 64 log-
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
 
 <div align="left">
+
+For a detailed description read <ins>add link to publication when published</ins>.
+
+HOWLish v 1.0.0 can be downloaded: 
+- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
+- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
 ## Detection Pipeline
 
