@@ -6,6 +6,10 @@ We developed HOWLish by applying transfer learning from [VGGish](https://github.
 
 Here, we provide HOWLish and a tailored pipeline that can be used for field deploymnent. For a detailed description read <ins>add link to publication when published</ins>.
 
+HOWLish v 1.0.0 can be downloaded: 
+- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
+- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
+
 ## The model
 
 HOWLish classifies short audio snippets - 0.96 seconds of audio represented in 96 x 64 (frames x frequency bands) log-mel spectrograms - regarding the presence of wolf howls. For each snippet it predicts the presence (1) or absence (0) of a wolf howl.
@@ -21,13 +25,6 @@ At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* e
 | Model  | Accuracy | Precision | Recall | Fall-out | F1-score | F2-score | AUC | PRC |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | HOWLish  | .983  | .00618  | .772  | .0174  | .00508  | .0123  | .939  | .0897  |
-
-HOWLish v 1.0.0 can be downloaded: 
-- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
-- [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
-
-A toy dataset can be downloaded [here](https://drive.google.com/file/d/11ouRaRAI_V38n5T4q4Cr8zgeRPUB2jgS/view?usp=drive_link). This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
-The dataset is structured in two folders: input and output, compatible with the way the detection pipeline was coded. The .WAV files are 30 minutes long and were recorded with a sample rate of 8kHz. The current version of the pipeline only works with 8kHz audio data. 
 
 ## Deployment
 
@@ -56,6 +53,10 @@ During field tests and with these operating settings, HOWLish was able to retrie
 Automated inference using HOWLish offered 22-fold reduction in the volume of data that needed to be manually processed by an operator, and a 15-fold reduction in operator time, when compared to manual annotation.
 
 ## Usage
+
+A toy dataset can be downloaded [here](https://drive.google.com/file/d/11ouRaRAI_V38n5T4q4Cr8zgeRPUB2jgS/view?usp=drive_link). This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
+The dataset is structured in two folders: input and output, compatible with the way the detection pipeline was coded. The .WAV files are 30 minutes long and were recorded with a sample rate of 8kHz. The current version of the pipeline only works with 8kHz audio data. 
+
 
 ((work in progress))
 
