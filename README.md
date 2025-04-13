@@ -24,19 +24,13 @@ At a prediction threshold of .5, HOWlish is able to retrieve 77% of the *wolf* e
 
 ## Deployment
 
-With the goal of deploying HOWLish to passive acoustic monitoring of wolves in the wild, we designed a series of pre- and post-processing rules that allows the conversion of recorded soundscapes (8kHz .WAV files) into 1 minute and 50 seconds clips of sound potentially containing wolf howls - a detection pipeline. 
-
-### Detection pipeline
-
-The pipeline (v1.0.0) we developed to deploy HOWLish to field operatios has the following flow:
+We developped a detection pipeline (currently v1.0.0) to deploy HOWLish to field operations. It has the followign flow: 
 
 1) Observed soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
 2) HOWlish predicts whether each example is *not-wolf* or *wolf* (continuous prediction value between 0 and 1, respectively);
 3) Prediction values get averaged by a moving window of size **W**;
 4) Windows with average prediction values higher than a threshold of value **T** are selected;
 5) 110 seconds of sound around the retained windows are exported as sound segments potentially containing wolf howls.
-
-Here's a graphical representation of this workflow (not at scale):
 
 <img width="1705" alt="DetectionPipelineScheme" src="https://github.com/user-attachments/assets/8d4675da-716a-4a64-a66a-f4f0d9b615ce">
 
