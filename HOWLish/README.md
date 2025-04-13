@@ -27,7 +27,7 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
 A toy dataset can be downloaded [here](https://drive.google.com/file/d/11ouRaRAI_V38n5T4q4Cr8zgeRPUB2jgS/view?usp=drive_link). This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
-The dataset is structured in two folders: input and output, compatible with the way the detection pipeline was coded. The .WAV files are 30 minutes long and were recorded with a sample rate of 8kHz. The pipeline is currently tailored to 8kHz audio data. 
+The dataset is structured in two folders: input and output, compatible with the way the detection pipeline was coded. The .WAV files are 30 minutes long and were recorded with a sample rate of 8kHz. The current version of the pipeline only works with 8kHz audio data. 
 
 ## Deployment
 
