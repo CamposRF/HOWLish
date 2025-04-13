@@ -26,7 +26,7 @@ HOWLish v 1.0.0 can be downloaded:
 
 We developped a detection pipeline to deploy HOWLish to field operations. Its current version (1.0.0) has the followign flow: 
 
-1) Observed soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
+1) Recorded soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
 2) HOWlish predicts whether each example is *not-wolf* or *wolf* (continuous prediction value between 0 and 1, respectively);
 3) Prediction values get averaged by a moving window of size **W**;
 4) Windows with average prediction values higher than a threshold of value **T** are selected;
