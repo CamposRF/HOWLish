@@ -83,6 +83,6 @@ The toy dataset includes two .WAV files from passive acoustic monitoring campaig
 ## Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
 
-> [!NOTE]
+> [!TIP]
 > 
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please email the archive curator (paulo-marques@edu.ulisboa.pt) and the collections head (geral@museus.ulisboa.pt).
