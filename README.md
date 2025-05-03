@@ -49,26 +49,25 @@ To deploy HOWLish using our detection pipeline we suggest downloading its [lates
 Building on [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install) to create a python environment: 
 
 1) Create a conda environment with python 
-'''python
+```python
 conda create -n py312 python=3.12
-'''
+```
 
 2) Install the libraries needed to run our scripts
-'''python
+```python
 pip install -r requirements. txt
-'''
-3) Download [HOWLish frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing);
+```
+3) Download [HOWLish frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link)
 4) Open HOWLish_pipeline.py script
 5) Add path to the model file on line 15 (example: path_to_howlish_frozen = r"C:\Users\you\Downloads\v100\HOWLish_fg_100.pb")
 6) Add path to input folder on line 58 (example:	source_folder =  r"C:\Users\you\Downloads\v100\toy_data\input")
 7) Add path to input folder on line 59 (example:	save_folder =    r"C:\Users\rafa3\Downloads\v100\toy_data\output")
 8) Save HOWLish_pipeline.py script
 9) Run HOWLish_pipeline.py script
-'''python
+```python
 python HOWLish_pipeline.py
-'''
+```
 
-The toy dataset can be downloaded [here](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link). 
 This dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal.
 
 
