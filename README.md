@@ -85,3 +85,5 @@ The detection pipeline makes use of preprocessing scripts from teh original [VGG
 
 > [!NOTE]
 > All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please email the archive curator (paulo-marques@edu.ulisboa.pt) and the collections head (geral@museus.ulisboa.pt).
+>
+
