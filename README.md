@@ -50,7 +50,7 @@ HOWLish can be deployed from scratch using python with the following workflow:
 2) Download HOWLish [latest release](https://github.com/CamposRF/HOWLish/releases);
 3) Create a conda environment with python installed;
 ```
-conda create -n tutorial312 python=3.12
+conda create -n HOWLish310 python=3.10
 ```
 
 4) Install the libraries needed to run our scripts, as specified on the `requirements.txt` file;
