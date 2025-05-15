@@ -47,11 +47,14 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 HOWLish can be deployed from scratch using python with the following workflow:
 
 1) Download and install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install);
-2) Create a conda environment with python installed;
+2) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
+3) Create and activate a conda environment with python installed;
 ```
 conda create -n HOWLish310 python=3.10
 ```
-3) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
+```
+conda activate HOWLish310 
+```
 4) Install the libraries needed to run our scripts, as specified on the `requirements.txt` file;
 ```
 pip install -r requirements.txt
