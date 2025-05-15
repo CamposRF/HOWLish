@@ -47,32 +47,30 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 HOWLish can be deployed from scratch using python with the following workflow:
 
 1) Download and install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install);
-2) Download HOWLish [latest release](https://github.com/CamposRF/HOWLish/releases);
-3) Create a conda environment with python installed;
+2) Create a conda environment with python installed;
 ```
 conda create -n HOWLish310 python=3.10
 ```
-
+3) Download HOWLish [latest release](https://github.com/CamposRF/HOWLish/releases), [HOWLish frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
 4) Install the libraries needed to run our scripts, as specified on the `requirements.txt` file;
 ```
 pip install -r requirements.txt
 ```
-5) Download [HOWLish frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
-6) Open the `HOWLish_pipeline.py` script;
-7) Add path to the frozen model model file on line 15;
+5) Open the `HOWLish_pipeline.py` script;
+6) Add path to the frozen model model file on line 19;
 ```python
 path_to_howlish_frozen = r"C:\Users\you\Downloads\v100\HOWLish_fg_100.pb"
 ```
-8) Add path to input folder on line 58;
+7) Add path to input folder on line 22;
 ```python
 source_folder =  r"C:\Users\you\Downloads\v100\toy_data\input"
 ```
-9) Add path to output folder on line 59;
+8) Add path to output folder on line 23;
 ``` python
 save_folder = r"C:\Users\you\Downloads\v100\toy_data\output"
 ```
-10) Save the `HOWLish_pipeline.py` script;
-11) Run the `HOWLish_pipeline.py` script;
+9) Save the `HOWLish_pipeline.py` script;
+10) Run the `HOWLish_pipeline.py` script;
 ```
 python HOWLish_pipeline.py
 ```
