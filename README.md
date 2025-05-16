@@ -44,36 +44,38 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-You can deploy HOWLish using python following the steps below. You will need to install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)
+You can deploy HOWLish using python following these steps:
+
 [Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)
 
-1) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
-2) Create and activate a conda environment with python installed;
+1) Download and install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install).
+2) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
+3) Create and activate a conda environment with python installed;
 ```
 conda create -n HOWLish310 python=3.10
 ```
 ```
 conda activate HOWLish310 
 ```
-3) Install the libraries needed to run our scripts, as specified on the `requirements.txt` file;
+4) Install the libraries needed to run our scripts, as specified on the `requirements.txt` file;
 ```
 pip install -r requirements.txt
 ```
-4) Open the `HOWLish_pipeline.py` script;
-5) Add path to the frozen model model file on line 19;
+5) Open the `HOWLish_pipeline.py` script;
+6) Add path to the frozen model model file on line 19;
 ```python
 path_to_howlish_frozen = r"C:\Users\you\Downloads\v100\HOWLish_fg_100.pb"
 ```
-6) Add path to input folder on line 22;
+7) Add path to input folder on line 22;
 ```python
 source_folder =  r"C:\Users\you\Downloads\v100\toy_data\input"
 ```
-7) Add path to output folder on line 23;
+8) Add path to output folder on line 23;
 ``` python
 save_folder = r"C:\Users\you\Downloads\v100\toy_data\output"
 ```
-8) Save the `HOWLish_pipeline.py` script;
-9) Run the `HOWLish_pipeline.py` script;
+9) Save the `HOWLish_pipeline.py` script;
+10) Run the `HOWLish_pipeline.py` script;
 ```
 python HOWLish_pipeline.py
 ```
