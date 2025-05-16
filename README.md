@@ -44,10 +44,8 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-HOWLish can easity be deployed from scratch using python.
-
-If you need help, use this [tutorial](https://www.youtube.com/watch?v=AOrImhGuMBg) that follows the steps below. 
-You will need to install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install). In the video we make use of [Visual Studio Code](https://code.visualstudio.com/)
+You can deploy HOWLish using python following the steps below. You will need to install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)
+[Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)
 
 1) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
 2) Create and activate a conda environment with python installed;
