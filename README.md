@@ -64,15 +64,15 @@ pip install -r requirements.txt
 5) Open the `HOWLish_pipeline.py` script;
 6) Add path to the frozen model model file on line 19;
 ```python
-path_to_howlish_frozen = r"C:\Users\you\Downloads\v100\HOWLish_fg_100.pb"
+path_to_howlish_frozen = r"C:\Users\you\Downloads\v100\HOWLish_fg_100.pb" #example
 ```
 7) Add path to input folder on line 22;
 ```python
-source_folder =  r"C:\Users\you\Downloads\v100\toy_data\input"
+source_folder =  r"C:\Users\you\Downloads\v100\toy_data\input" #example
 ```
 8) Add path to output folder on line 23;
 ``` python
-save_folder = r"C:\Users\you\Downloads\v100\toy_data\output"
+save_folder = r"C:\Users\you\Downloads\v100\toy_data\output" #example
 ```
 9) Save the `HOWLish_pipeline.py` script;
 10) Run the `HOWLish_pipeline.py` script;
