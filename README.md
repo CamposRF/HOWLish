@@ -44,7 +44,7 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-You can deploy HOWLish using python following these steps:
+You can use HOWLish (w/ python) to look for wolf howls in your data following these steps:
 
 [Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)    ||   [Youtube guide (Windows)](https://youtu.be/jbUwlCPOsro)
 
