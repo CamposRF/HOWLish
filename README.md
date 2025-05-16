@@ -46,7 +46,8 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 You can deploy HOWLish using python following these steps:
 
-[Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)
+[Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)       [Youtube guide (Windows)](https://youtu.be/jbUwlCPOsro)
+
 
 1) Download and install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install).
 2) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
