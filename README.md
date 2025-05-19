@@ -82,10 +82,29 @@ python HOWLish_pipeline.py
 
 The pipeline will look for subfolders inside the input directory and output results inside subfolders with the same nale in ouput directory. Carefull when setting the patht o these directories. 
 
-The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). 
+The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90).
+
+toy_data/
+├─ input/
+│  ├─ toy_data/
+│  │  ├─ L080_20230522_195840.WAV
+│  │  ├─ L094_20230722_230000.WAV
+├─ output/
+│  ├─ expected_output/
+│  │  ├─ L094_20230722_230000.WAV
+│  │  ├─ L080_20230522_195840_0151_9991.wav
+│  │  ├─ L080_20230522_195840_0341_9989.wav
+│  │  ├─ L080_20230522_195840_0757_9937.wav
+│  │  ├─ L080_20230522_195840_0902_9989.wav
+│  │  ├─ L080_20230522_195840_1545_9980.wav
+│  │  ├─ L094_20230722_230000_1635_9984.wav
+│  │  ├─ L094_20230722_230000_1732_9913.wav
+│  │  ├─ L094_20230722_230000_1929_9995.wav
+│  │  ├─ L094_20230722_230000_2029_9967.wav
+│  │  ├─ test_data_log.csv
+
 
 ## Credits
-The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
+The detection pipeline makes use of preprocessing scripts from the original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
 
-> [!NOTE]
-> All data was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please email the archive curator (paulo-marques@edu.ulisboa.pt) and the collections head (geral@museus.ulisboa.pt).
+All data used to develop HOWLish was recorded between 2020 and 2024 in the Iberia Peninsula and is deposited, along with the associated manual annotations, in the Natural Sounds Archive of the Museum of Natural History and Sciences, University of Lisbon, Portugal. For access please email the archive curator (paulo-marques@edu.ulisboa.pt) and the collections head (geral@museus.ulisboa.pt).
