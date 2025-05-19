@@ -106,6 +106,7 @@ toy_data/
 
 ```
 
+
 ## Credits
 The detection pipeline makes use of preprocessing scripts from the original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
 
