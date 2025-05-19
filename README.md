@@ -82,31 +82,7 @@ python HOWLish_pipeline.py
 
 The pipeline will look for subfolders inside the input directory and output results inside subfolders with the same nale in ouput directory. Carefull when setting the patht o these directories. 
 
-The toy dataset is structured accordigly: 
-
-```
-toy_data/
-├─ input/
-│  ├─ toy_data/
-│  │  ├─ L080_20230522_195840.WAV
-│  │  ├─ L094_20230722_230000.WAV
-├─ output/
-│  ├─ expected_output/
-│  │  ├─ L080_20230522_195840_0000_9994.wav
-│  │  ├─ L080_20230522_195840_0151_9991.wav
-│  │  ├─ L080_20230522_195840_0341_9989.wav
-│  │  ├─ L080_20230522_195840_0757_9937.wav
-│  │  ├─ L080_20230522_195840_0902_9989.wav
-│  │  ├─ L080_20230522_195840_1545_9980.wav
-│  │  ├─ L094_20230722_230000_1635_9984.wav
-│  │  ├─ L094_20230722_230000_1732_9913.wav
-│  │  ├─ L094_20230722_230000_1929_9995.wav
-│  │  ├─ L094_20230722_230000_2029_9967.wav
-│  │  ├─ test_data_log.csv
-
-```
-
-in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). Ouput files are named in the follwign way: 
+The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). Ouput files are named in the follwign way: 
 
 ```
 (original name)_(time in seconds when the clip starts)_(prediction value).wav
