@@ -84,6 +84,7 @@ The pipeline will look for subfolders inside the input directory and output resu
 
 The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90).
 
+```
 toy_data/
 ├─ input/
 │  ├─ toy_data/
@@ -102,7 +103,7 @@ toy_data/
 │  │  ├─ L094_20230722_230000_1929_9995.wav
 │  │  ├─ L094_20230722_230000_2029_9967.wav
 │  │  ├─ test_data_log.csv
-
+```
 
 ## Credits
 The detection pipeline makes use of preprocessing scripts from the original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
