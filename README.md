@@ -82,8 +82,10 @@ python HOWLish_pipeline.py
 
 The pipeline will look for subfolders inside the input directory and output results inside subfolders with the same nale in ouput directory. Carefull when setting the patht o these directories. 
 
-The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). Ouput files are named in the follwign way: (original name)_(time in seconds when the clip starts)_(prediction value).wav
-
+The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). Ouput files are named in the follwign way: 
+```
+(original name)_(time in seconds when the clip starts)_(prediction value).wav
+```
 ```
 toy_data/
 ├─ input/
