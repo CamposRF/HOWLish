@@ -44,10 +44,9 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-You can use HOWLish (w/ python) to look for wolf howls in your data following these steps:
+Here is one way you can deploy HOWLish with pyhton: 
 
 [Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)    ||   [Youtube guide (Windows)](https://youtu.be/jbUwlCPOsro)
-
 
 1) Download and install [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install).
 2) Download our [latest release](https://github.com/CamposRF/HOWLish/releases), the [frozen graph](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing), and the [toy dataset](https://drive.google.com/file/d/1uxuWrNfPz-IgfRJ-XIGDpsLe_9ghIzW6/view?usp=drive_link);
@@ -81,7 +80,9 @@ save_folder = r"C:\Users\you\Downloads\v100\toy_data\output" #example
 python HOWLish_pipeline.py
 ```
 
-The toy dataset includes two .WAV files from passive acoustic monitoring campaigns conducted in the north of Portugal (input folder), and the sound segments we expected the classification pipeline to output with W = 3 and T = 0.90 (output folder).
+The pipeline will look for subfolders inside the input directory and output results inside subfolders with the same nale in ouput directory. Carefull when setting the patht o these directories. 
+
+The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results; if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). 
 
 ## Credits
 The detection pipeline makes use of preprocessing scripts from teh original [VGGish repository](https://github.com/tensorflow/models/tree/master/research/audioset/vggish), all licensed under Apache License 2.0. We documented all changes to these scripts and included a link to the original version. 
