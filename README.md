@@ -88,6 +88,7 @@ The toy dataset is structured accordigly: in it you will find a input folder wit
 (original name)_(time in seconds when the clip starts)_(prediction value).wav
 ```
 
+The pipeline assumes by default that input data has a sampling rate of 8000 Hz. You can adjust the short time Fourier transform on `vggish_params.py`. For mode details on how we handled pre-tranformation of input data read <ins>add link to publication when published</ins>.
 
 
 ## Credits
