@@ -84,10 +84,10 @@ The pipeline assumes the .WAV files to be processed are stored in nested subfold
 
 ```
 Input folder/
-├─ Campaign 1/
+├─ Campaign-1/
 │  ├─ example-A.wav
 │  ├─ example-B.wav
-├─ Campaign 2/
+├─ Campaign-2/
 │  ├─ example-C.wav
 │  ├─ example-D.wav
 │  ├─ example-E.wav
@@ -96,9 +96,9 @@ Input folder/
 It then creates a mirrored folder structured inside the output folder directory with the results:
 ```
 Output folder/
-├─ Campaign 1/
+├─ Campaign-1/
 │  ├─ Campaign_1_log.csv  
-├─ Campaign 2/
+├─ Campaign-2/
 │  ├─ example-D_0000_9999.wav
 │  ├─ example-D_0000_9999.wav
 │  ├─ example-D_0000_9999.wav
