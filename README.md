@@ -80,13 +80,40 @@ save_folder = r"C:\Users\you\Downloads\v100\toy_data\output" #example
 python HOWLish_pipeline.py
 ```
 
-The pipeline will look for subfolders inside the input directory and output results inside subfolders with the same nale in ouput directory. Carefull when setting the patht o these directories. 
+The pipeline assumes the .WAV files to be processed are stored in nested subfolders inside the input folder directory: 
 
-The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with expected results if you choose to process the 2 .WAV files we made available with the settings we recommend (W = 3 and T = 0.90). Ouput files are named in the follwign way: 
+```
+Input folder/
+├─ Campaign 1/
+│  ├─ example-A.wav
+│  ├─ example-B.wav
+├─ Campaign 2/
+│  ├─ example-C.wav
+│  ├─ example-D.wav
+│  ├─ example-E.wav
+
+```
+It then creates a mirrored folder structured inside the output folder directory with the results:
+```
+Output folder/
+├─ Campaign 1/
+│  ├─ Campaign_1_log.csv  
+├─ Campaign 2/
+│  ├─ example-D_0000_9999.wav
+│  ├─ example-D_0000_9999.wav
+│  ├─ example-D_0000_9999.wav
+│  ├─ example-D_0000_9999.wav
+│  ├─ example-D_0000_9999.wav
+│  ├─ Campaign_1_log.csv 
+
+```
+The log file documents the time needed to process the files inside a given folder and the settings used. Ouput files are named in the follwign way: 
 
 ```
 (original name)_(time in seconds when the clip starts)_(prediction value).wav
 ```
+
+The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with the expected results for those 2 .WAV files (W = 3 and T = 0.90). 
 
 The pipeline assumes by default that input data has a sampling rate of 8000 Hz. You can adjust the short time Fourier transform on `vggish_params.py`. For mode details on how we handled pre-tranformation of input data read <ins>add link to publication when published</ins>.
 
