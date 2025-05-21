@@ -104,7 +104,7 @@ Output folder/
 │  ├─ example-D_0000_9999.wav
 │  ├─ example-D_0000_9999.wav
 │  ├─ example-D_0000_9999.wav
-│  ├─ Campaign_1_log.csv 
+│  ├─ Campaign_2_log.csv 
 
 ```
 The log file documents the time needed to process the files inside a given folder and the settings used. Ouput files are named in the follwign way: 
