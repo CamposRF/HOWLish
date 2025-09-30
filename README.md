@@ -25,6 +25,9 @@ HOWLish v 1.0.0 can be downloaded:
 ### Note
 During HOWLish's peer revision [Automated detection of wolf howls using audio spectrogram transformers](https://www.nature.com/articles/s41598-025-11413-z) was released. We will benchmark performances as soon as possible
 
+[!NOTE]
+Useful information that users should know, even when skimming content.
+
 ## Detection Pipeline
 
 We developped a detection pipeline to deploy HOWLish to field operations. Its current version (1.0.0) has the followign flow: 
