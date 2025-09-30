@@ -22,6 +22,9 @@ HOWLish v 1.0.0 can be downloaded:
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
 ### Note
 During HOWLish's peer revision [Automated detection of wolf howls using audio spectrogram transformers](https://www.nature.com/articles/s41598-025-11413-z) was released. We will benchmark performances as soon as possible
 
