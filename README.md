@@ -16,11 +16,15 @@ Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf* audio snippet
 
 <div align="left">
 
-For a detailed description of HOWLish read [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
+For a detailed description read [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
 
 HOWLish v 1.0.0 can be downloaded: 
 - [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
+
+[!NOTE] 
+Between HOWLish's peer revision and production another automated detection tool for wolf howl was been released: [Automated detection of wolf howls using audio spectrogram transformers](https://www.nature.com/articles/s41598-025-11413-z)
+We will benchmark it agains HOWLish in the near future.
 
 ## Detection Pipeline
 
