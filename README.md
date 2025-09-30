@@ -118,7 +118,7 @@ The log file documents the time needed to process the files inside a given folde
 
 The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with the expected results for those 2 .WAV files (W = 3 and T = 0.90). 
 
-The pipeline assumes by default that input data has a sampling rate of 8000 Hz. You can adjust the short time Fourier transform on `vggish_params.py`. For mode details on how we handled pre-tranformation of input data read <ins>add link to publication when published</ins>.
+The pipeline assumes by default that input data has a sampling rate of 8000 Hz. You can adjust the short time Fourier transform on `vggish_params.py`. For mode details on how we handled pre-tranformation of input data [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
 
 
 ## Credits
