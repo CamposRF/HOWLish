@@ -19,7 +19,7 @@ Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf* audio snippet
 For a detailed description read [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
 
 HOWLish v 1.0.0 can be downloaded: 
-- [here](https://drive.google.com/file/d/1SdULuhgMdjlN5rLRAPm1dW6M6ASdT6Pp/view?usp=drive_link) for the TensorFlow SavedModel format; 
+- [here](https://drive.google.com/file/d/1wfkV8c-qDWEtUjd-lnIT2K29y2ZbYPsp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
 #### Note
