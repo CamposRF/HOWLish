@@ -18,7 +18,7 @@ Evaluated on a test set with 5081 *wolf* and 36,198,705 *not-wolf* audio snippet
 
 For a detailed description read [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
 
-HOWLish v 1.0.0 can be downloaded: 
+HOWLish v1 can be downloaded: 
 - [here](https://drive.google.com/file/d/1wfkV8c-qDWEtUjd-lnIT2K29y2ZbYPsp/view?usp=drive_link) for the TensorFlow SavedModel format; 
 - [here](https://drive.google.com/file/d/1Sdt5TwN-OteMp7fV7ub9G109d-dSo8du/view?usp=sharing) for the frozen graph format; 
 
@@ -27,7 +27,7 @@ During HOWLish's peer revision [Automated detection of wolf howls using audio sp
 
 ## Detection Pipeline
 
-We developped a detection pipeline to deploy HOWLish to field operations. Its current version (1.0.0) has the followign flow: 
+We developed a detection pipeline to deploy HOWLish to field operations. Its current version (1.0.0) has the following flow: 
 
 1) Recorded soundscapes (.WAV) get segmented into 0.96s long audio examples and each sample normalized to fall within the range (-1.0, +1.0);
 2) HOWlish predicts whether each example is *not-wolf* or *wolf* (continuous prediction value between 0 and 1, respectively);
@@ -47,7 +47,7 @@ We performed a sensitivity analysis to window size (W) and exclusion threshold (
 
 ### Usage
 
-Here is one way you can deploy HOWLish with pyhton: 
+Here is one way you can deploy HOWLish with python: 
 
 [Youtube guide (MAC OS)](https://www.youtube.com/watch?v=AOrImhGuMBg)    ||   [Youtube guide (Windows)](https://youtu.be/jbUwlCPOsro)
 
@@ -83,7 +83,7 @@ save_folder = r"C:\Users\you\Downloads\v100\toy_data\output" #example
 python HOWLish_pipeline.py
 ```
 
-The pipeline assumes the .WAV files to be processed are stored in nested subfolders inside the input folder directory: 
+The pipeline assumes the .WAV files to be processed are stored in nested sub-folders inside the input folder directory: 
 
 ```
 Input folder/
@@ -110,13 +110,13 @@ Output folder/
 │  ├─ Campaign_2_log.csv 
 
 ```
-The log file documents the time needed to process the files inside a given folder and the settings used. Ouput files are named in the follwign way: 
+The log file documents the time needed to process the files inside a given folder and the settings used. Output files are named in the following way: 
 
 ```
 (original name)_(time in seconds when the clip starts)_(prediction value).wav
 ```
 
-The toy dataset is structured accordigly: in it you will find a input folder with a subfolder with 2 .WAV files collected in the North of Portugal, and an output folder with a subfolder with the expected results for those 2 .WAV files (W = 3 and T = 0.90). 
+The toy dataset is structured accordingly: in it you will find a input folder with a sub-folder with 2 .WAV files collected in the North of Portugal, and an output folder with a sub-folder with the expected results for those 2 .WAV files (W = 3 and T = 0.90). 
 
 The pipeline assumes by default that input data has a sampling rate of 8000 Hz. You can adjust the short time Fourier transform on `vggish_params.py`. For mode details on how we handled pre-tranformation of input data read [HOWLish: a CNN for automated wolf howl detection](https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.70024).
 
